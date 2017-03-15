@@ -1,0 +1,106 @@
+/* 
+    Created on : Mar 14, 2017, 4:43:41 PM
+    Author     : MLakov
+*/
+
+/** RESETS*/
+html,body{
+  box-sizing: border-box;
+  padding:0;
+  margin:0;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+ display:block;
+}
+nav ul {
+ list-style:none;
+}
+blockquote, q {
+ quotes:none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+ content:'';
+ content:none;
+}
+a {
+ margin:0;
+ padding:0;
+ font-size:100%;
+ vertical-align:baseline;
+ background:transparent;
+}
+table {
+ border-collapse:collapse;
+ border-spacing:0;
+}
+input, select {
+ vertical-align:middle;
+}
+
+
+body{background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);}
+.timer{    
+        min-height: 100vh;
+}
+.timer-controls{
+    display:flex;
+    width:100%;
+    -webkit-box-shadow: 0px 1px 10px -1px rgba(26,26,26,1);
+    -moz-box-shadow: 0px 1px 10px -1px rgba(26,26,26,1);
+    box-shadow: 0px 1px 10px -1px rgba(26,26,26,1);  
+}
+.timer-button{ 
+     flex-grow:1;
+     padding: 20px 15px;
+    border: none;
+    background: #323d48;
+    font-size: 20px;
+    color: white;
+    cursor:pointer;
+    position:relative;
+    transition: all 0.2s ease;
+}
+.timer-button:hover{
+   background: #465361
+}
+.timer-button:after{
+    content:' ';
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:0;
+    height:4px;
+    background:white;
+    transition: all 0.3s ease;
+}
+.timer-button.active:after{
+    width:100%;
+}
+.timer-controls input{
+    flex:1;
+    padding: 20px 15px;
+}
+.display {
+  flex:1;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.display-time-left{
+    color:white;
+   font-size: 140px;
+   text-shadow: 0px 1px 1px rgba(0, 0, 0, 1);
+   
+}
+.display-end-time{
+    color:white;
+    font-size:50px;    
+}
