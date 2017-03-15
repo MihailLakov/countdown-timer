@@ -22,14 +22,16 @@ function timer(seconds){
             clearInterval(countdown);
             clearTimer();
             return;
-        }
+        }        
         displayTimeLeft(secondsLeft);        
     },1000);
 }
 function displayTimeLeft(seconds){   
     var minutes = Math.floor(seconds / 60);     
     var remainingSeconds = seconds % 60; 
-    timerDisplay.innerHTML = minutes + " : " + ((remainingSeconds < 10) ? '0' : ' '  + remainingSeconds);
+    var display = minutes + " : " + ((remainingSeconds < 10) ? '0' : ' '  + remainingSeconds);
+    timerDisplay.innerHTML = display;
+    document.title =display;
 }
 function displayEndTime(timestamp) {
   var end = new Date(timestamp);
